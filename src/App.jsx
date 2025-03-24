@@ -1,33 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './sections/Header'
+// import './App.css'
+import { useState } from 'react';
+import Form from './sections/Form';
+import Display from './sections/Display';
+import Personal from './components/Personal';
+import Education from './components/Education';
+import Experience from './components/Experience';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [dataFromPersonal, setDataFromPersonal] = useState({});
+  const [dataFromEducation, setDataFromEducation] = useState({});
+  const [dataFromExperience, setDataFromExperience] = useState({});
+
+  function handleDataFromPersonal(data){
+    setDataFromPersonal(data);
+  }
+
+  function handleDataFromEducation(data){
+    setDataFromEducation(data);
+  }
+
+  function handleDataFromExperience(data){
+    setDataFromExperience(data);
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Header />
+      <div className='main-content'>
+      <section className="form">
+            <Personal sendData={handleDataFromPersonal}/>
+            <Education sendData={handleDataFromEducation}/>
+            <Experience sendData={handleDataFromExperience}/>
+        </section>
+        <Display 
+          personal={dataFromPersonal}
+          education={dataFromEducation}
+          experience={dataFromExperience}/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
