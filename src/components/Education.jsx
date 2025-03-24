@@ -50,7 +50,6 @@ function Education({sendData}){
                 />
                 <div className="buttons">
                     <button type='submit'>Save</button>
-                    <button>Edit</button>
                 </div>
             </form>
             
