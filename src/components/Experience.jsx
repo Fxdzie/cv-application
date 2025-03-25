@@ -19,55 +19,65 @@ function Experience({sendData}){
         <div className="experience">
             <h3>Experience: </h3>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="company"> Company: 
-                </label>
-                <input 
-                    type="text" 
-                    id="company"
-                    name='company'
-                    value={inputs.company || ""}
-                    onChange={handleChange}
-                />
+                <div className="input">
+                    <label htmlFor="company"> Company: 
+                    </label>
+                    <input 
+                        type="text" 
+                        id="company"
+                        name='company'
+                        value={inputs.company || ""}
+                        onChange={handleChange}
+                    />
+                </div>
+                
+                <div className="input">
+                    <label htmlFor="position"> Position: 
+                    </label>
+                    <input 
+                        type="text" 
+                        id="position"
+                        name='position'
+                        value={inputs.position || ""}
+                        onChange={handleChange}
+                    />
+                </div>
 
-                <label htmlFor="position"> Position: 
-                </label>
-                <input 
-                    type="text" 
-                    id="position"
-                    name='position'
-                    value={inputs.position || ""}
-                    onChange={handleChange}
-                />
+                <div className="input">
+                    <label htmlFor="responsibilities"> Responsibilities: 
+                    </label>
+                    <input 
+                        type="text" 
+                        id="responsibilities"
+                        name='responsibilities'
+                        value={inputs.responsibilities || ""}
+                        onChange={handleChange}
+                    />
+                </div>
 
-                <label htmlFor="responsibilities"> Responsibilities: 
-                </label>
-                <input 
-                    type="text" 
-                    id="responsibilities"
-                    name='responsibilities'
-                    value={inputs.responsibilities || ""}
-                    onChange={handleChange}
-                />
+                <div className="input">
+                    <label htmlFor="start-date"> From:
+                    </label>
+                    <input 
+                        type="date" 
+                        id="start-date"
+                        name='startDate'
+                        value={inputs.startDate || ""}
+                        onChange={handleChange}
+                    />
+                </div>
 
-                <label htmlFor="start-date"> From:
-                </label>
-                <input 
-                    type="date" 
-                    id="start-date"
-                    name='startDate'
-                    value={inputs.startDate || ""}
-                    onChange={handleChange}
-                />
-
-                <label htmlFor="end-date"> Until:
-                </label>
-                <input 
-                    type="date" 
-                    id="end-date"
-                    name='endDate'
-                    value={inputs.endDate || ""}
-                    onChange={handleChange}
-                />
+                <div className="input">
+                    <label htmlFor="end-date"> Until:
+                    </label>
+                    <input 
+                        type="date" 
+                        id="end-date"
+                        name='endDate'
+                        value={inputs.endDate || ""}
+                        onChange={handleChange}
+                    />
+                </div>
                 <div className="buttons">
                     <button type='submit'>Save</button>
                 </div>

@@ -19,45 +19,54 @@ function Personal({sendData}){
         <div className="personal">
             <h3>Personal Details: </h3>
             <form className="personalForm" onSubmit={handleSubmit}>
-                <label htmlFor="name"> Name: 
-                </label>
-                <input 
-                    type="text" 
-                    id="name"
-                    name='name'
-                    value={inputs.name || ""}
-                    onChange={handleChange}
+                <div className="input">
+                    <label htmlFor="name"> Name: 
+                    </label>
+                    <input 
+                        type="text" 
+                        id="name"
+                        name='name'
+                        value={inputs.name || ""}
+                        onChange={handleChange}
                     />
-
-                <label htmlFor="email"> Email: 
-                </label>
-                <input 
-                    type="text" 
-                    id="email"
-                    name='email'
-                    value={inputs.email || ""}
-                    onChange={handleChange}
+                </div>
+                
+                <div className="input">
+                    <label htmlFor="email"> Email: 
+                    </label>
+                    <input 
+                        type="text" 
+                        id="email"
+                        name='email'
+                        value={inputs.email || ""}
+                        onChange={handleChange}
                     />
+                </div>
 
-                <label htmlFor="number"> Phone Number: 
-                </label>
-                <input 
-                    type="number" 
-                    id="number"
-                    name='number'
-                    value={inputs.number || ""}
-                    onChange={handleChange}
-                />
+                <div className="input">
+                    <label htmlFor="number"> Phone Number: 
+                    </label>
+                    <input 
+                        type="number" 
+                        id="number"
+                        name='number'
+                        value={inputs.number || ""}
+                        onChange={handleChange}
+                    />
+                </div>
 
-                <label htmlFor="summary"> Summary:
-                </label>
-                <input 
-                    type="text" 
-                    id="summary"
-                    name='summary'
-                    value={inputs.summary || ""}
-                    onChange={handleChange}
-                />
+                <div className="input">
+                    <label htmlFor="summary"> Summary:
+                    </label>
+                    <input 
+                        type="text" 
+                        id="summary"
+                        name='summary'
+                        value={inputs.summary || ""}
+                        onChange={handleChange}
+                    />
+                </div>
+
                 <div className="buttons">
                     <button type='submit'>Save</button>
                 </div>

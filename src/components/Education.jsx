@@ -19,35 +19,43 @@ function Education({sendData}){
         <div className="education">
             <h3>Previous Education: </h3>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="degree"> Degree: 
-                </label>
-                <input 
-                    type="text" 
-                    id="degree"
-                    name='degree'
-                    value={inputs.degree || ""}
-                    onChange={handleChange}
-                />
+                <div className='input'>
+                    <label htmlFor="degree"> Degree: 
+                    </label>
+                    <input 
+                        type="text" 
+                        id="degree"
+                        name='degree'
+                        value={inputs.degree || ""}
+                        onChange={handleChange}
+                    />
+                </div>
+                
+                <div className='input'> 
+                    <label htmlFor="uni"> University: 
+                    </label>
+                    <input 
+                        type="text" 
+                        id="uni"
+                        name='uni'
+                        value={inputs.uni || ""}
+                        onChange={handleChange}
+                    />
+                </div>
 
-                <label htmlFor="uni"> University: 
-                </label>
-                <input 
-                    type="text" 
-                    id="uni"
-                    name='uni'
-                    value={inputs.uni || ""}
-                    onChange={handleChange}
-                />
+                <div className='input'>
+                    <label htmlFor="study-date"> Date of Study: 
+                    </label>
+                    <input 
+                        type="date" 
+                        id="study-date"
+                        name='studyDate'
+                        value={inputs.studyDate || ""}
+                        onChange={handleChange}
+                    />
+                </div>
 
-                <label htmlFor="study-date"> Date of Study: 
-                </label>
-                <input 
-                    type="date" 
-                    id="study-date"
-                    name='studyDate'
-                    value={inputs.studyDate || ""}
-                    onChange={handleChange}
-                />
+                
                 <div className="buttons">
                     <button type='submit'>Save</button>
                 </div>
