@@ -17,7 +17,7 @@ function Personal({sendData}){
 
     return (
         <div className="personal">
-            <h3>Personal Details: </h3>
+            <h3>Personal Details </h3>
             <form className="personalForm" onSubmit={handleSubmit}>
                 <div className="input">
                     <label htmlFor="name"> Name: 
@@ -58,8 +58,10 @@ function Personal({sendData}){
                 <div className="input">
                     <label htmlFor="summary"> Summary:
                     </label>
-                    <input 
+                    <textarea 
                         type="text" 
+                        rows={7}
+                        placeholder='Max: 250 words'
                         id="summary"
                         name='summary'
                         value={inputs.summary || ""}

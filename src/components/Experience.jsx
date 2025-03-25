@@ -17,7 +17,7 @@ function Experience({sendData}){
 
     return (
         <div className="experience">
-            <h3>Experience: </h3>
+            <h3>Experience </h3>
             <form onSubmit={handleSubmit}>
                 <div className="input">
                     <label htmlFor="company"> Company: 

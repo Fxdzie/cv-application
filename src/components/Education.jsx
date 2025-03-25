@@ -17,7 +17,7 @@ function Education({sendData}){
 
     return (
         <div className="education">
-            <h3>Previous Education: </h3>
+            <h3>Previous Education </h3>
             <form onSubmit={handleSubmit}>
                 <div className='input'>
                     <label htmlFor="degree"> Degree: 
