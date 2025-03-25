@@ -1,7 +1,5 @@
 import Header from './sections/Header'
-// import './App.css'
 import { useState } from 'react';
-import Form from './sections/Form';
 import Display from './sections/Display';
 import Personal from './components/Personal';
 import Education from './components/Education';
